@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ramya Crackers – Diwali Crackers Shop</title>
+<meta name="description" content="Shop sparklers, flower pots, rockets, sky shots and gift boxes at Ramya Crackers. Diwali offers up to 60% off.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#home" class="logo">🪔 RAMYA <span>CRACKERS</span></a>
+  <nav id="menu" class="menu">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#categories">Categories</a>
+    <a href="#products">Shop</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="cart-btn" id="openCart" aria-label="Open cart">🛒<span id="cartCount">0</span></button>
+    <button class="burger" id="burger" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <canvas id="fireworks"></canvas>
+  <div class="hero-inner">
+    <p class="tag">✨ Diwali Mega Sale · Up to 60% OFF</p>
+    <h1>Light Up Your <em>Diwali</em><br>With Ramya Crackers</h1>
+    <p class="sub">Safe, certified and spectacular crackers delivered across Tamil Nadu. Sparklers, sky shots, flower pots and festive gift boxes at festival prices.</p>
+    <div class="hero-btns">
+      <a href="#products" class="btn glow">Shop Crackers</a>
+      <a href="#offers" class="btn ghost">View Offers</a>
+    </div>
+    <div class="countdown" id="countdown" aria-live="off">
+      <div><b id="cdD">00</b><small>Days</small></div>
+      <div><b id="cdH">00</b><small>Hours</small></div>
+      <div><b id="cdM">00</b><small>Minutes</small></div>
+      <div><b id="cdS">00</b><small>Seconds</small></div>
+    </div>
+    <p class="cd-note" id="cdNote">Until Diwali – 8 November 2026</p>
+  </div>
+  <div class="diya d1">🪔</div><div class="diya d2">🪔</div><div class="diya d3">🎆</div><div class="diya d4">✨</div>
+</section>
+
+<section class="marquee" id="offers">
+  <div class="marquee-track">
+    <span>🎇 Flat 40% OFF on Gift Boxes</span><span>🚚 Free delivery above ₹2000</span>
+    <span>🎁 Use code <b>DIWALI10</b> for extra 10% off</span><span>✅ 100% certified safe crackers</span>
+    <span>🎇 Flat 40% OFF on Gift Boxes</span><span>🚚 Free delivery above ₹2000</span>
+    <span>🎁 Use code <b>DIWALI10</b> for extra 10% off</span><span>✅ 100% certified safe crackers</span>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="about-art"><div class="orb">🎆</div><div class="orb o2">🪔</div></div>
+  <div class="about-text">
+    <h2 class="title">About Ramya Crackers</h2>
+    <p>For over 20 years, Ramya Crackers has brought the sparkle of Sivakasi to families in and around Tiruchengode. Every box is sourced directly from licensed manufacturers, tested for quality and packed with care.</p>
+    <div class="stats">
+      <div><b data-count="20">0</b>+<small>Years of joy</small></div>
+      <div><b data-count="50000">0</b>+<small>Happy customers</small></div>
+      <div><b data-count="150">0</b>+<small>Cracker varieties</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="categories">
+  <h2 class="title">Shop by Category</h2>
+  <div class="cats" id="cats"></div>
+</section>
+
+<section class="section" id="products">
+  <h2 class="title">Festival Specials</h2>
+  <div class="toolbar">
+    <input type="search" id="search" placeholder="🔍 Search crackers (e.g. rocket, sparkler)…" aria-label="Search crackers">
+    <select id="sort" aria-label="Sort products">
+      <option value="default">Sort: Featured</option>
+      <option value="low">Price: Low to High</option>
+      <option value="high">Price: High to Low</option>
+      <option value="disc">Biggest Discount</option>
+    </select>
+  </div>
+  <div class="chips" id="chips"></div>
+  <div class="grid" id="grid"></div>
+  <p class="empty" id="empty" hidden>No crackers found. Try a different search or category.</p>
+</section>
+
+<section class="section dark" id="gallery">
+  <h2 class="title">Festival Gallery</h2>
+  <div class="gallery" id="galleryGrid"></div>
+</section>
+
+<section class="section" id="reviews">
+  <h2 class="title">Loved by Families</h2>
+  <div class="reviews" id="reviewGrid"></div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="contact-info">
+    <h2 class="title left">Contact Us</h2>
+    <p>Bulk order for your shop, temple or wedding? Send us a message and we will call you back within a day.</p>
+    <ul>
+      <li>📍 Salem Main Road, Tiruchengode, Tamil Nadu</li>
+      <li>📞 +91 98765 43210</li>
+      <li>✉️ hello@ramyacrackers.in</li>
+      <li>🕘 Open daily 9 AM – 10 PM</li>
+    </ul>
+  </div>
+  <form id="contactForm" novalidate>
+    <label>Name<input type="text" id="cName" required></label>
+    <label>Email<input type="email" id="cEmail" required></label>
+    <label>Message<textarea id="cMsg" rows="4" required></textarea></label>
+    <p class="form-msg" id="formMsg" role="status"></p>
+    <button class="btn glow" type="submit">Send message</button>
+  </form>
+</section>
+
+<footer class="footer">
+  <div class="logo">🪔 RAMYA <span>CRACKERS</span></div>
+  <p>Celebrate responsibly: light crackers outdoors, keep water nearby and supervise children.</p>
+  <div class="foot-links"><a href="#home">Home</a><a href="#products">Shop</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div>
+  <small>© 2026 Ramya Crackers. Wishing you a safe and sparkling Diwali!</small>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Shopping cart">
+  <div class="drawer-head"><h3>Your Cart</h3><button id="closeCart" aria-label="Close cart">✕</button></div>
+  <div class="drawer-body" id="cartItems"></div>
+  <div class="drawer-foot">
+    <div class="coupon"><input id="coupon" placeholder="Coupon code"><button id="applyCoupon">Apply</button></div>
+    <div class="row"><span>Subtotal</span><b id="subtotal">₹0</b></div>
+    <div class="row" id="couponRow" hidden><span>Coupon (10%)</span><b id="couponAmt">-₹0</b></div>
+    <div class="row"><span>Delivery</span><b id="delivery">₹0</b></div>
+    <div class="row total"><span>Total</span><b id="total">₹0</b></div>
+    <button class="btn glow full" id="checkout">Checkout</button>
+  </div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+<button class="top" id="toTop" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
